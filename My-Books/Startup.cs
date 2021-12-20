@@ -30,7 +30,7 @@ namespace My_Books
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My_Books", Version = "v1" });
+                c.SwaggerDoc("v2", new OpenApiInfo { Title = "My_Books_updated_title", Version = "v2" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace My_Books
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My_Books v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v2/swagger.json", "My_Books_ui_updated v2"));
             }
 
             app.UseHttpsRedirection();
